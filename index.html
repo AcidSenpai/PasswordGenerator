@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordGenerator</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="title">
+            <h1 class="h1_title">Password Generator</h1>
+        </div>
+        <div class="wrapper">
+            <div class="app-container">
+                <div class="input-container">
+                    <input class="inputPassword" id="inputPassword" type="text" placeholder="Oe4&/e9" autocomplete="off">
+                    <a href="#"><i class="ri-file-copy-line"></i></a>
+                </div>
+    
+                <div class="settings-container">
+                    <div class="settings-length">
+                        <span class="length_span">Character Length</span>
+                        <span class="length_span-value">0</span>
+                    </div>
+                    <div class="settings-slide">
+                        <input class="settings-slide_range" id="settings-slide_range" type="range" min="1" max="20">
+                    </div>
+                    <div class="settings-checkbutton">
+                        <div class="chekbutton-uppercase">
+                            <input type="checkbox" class = "checkbutton_uppercase" id="checkbutton_uppercase">
+                            <span>Include Uppercase Letters</span>
+                        </div>
+                        <div class="checkbutton-lowercase">
+                            <input type="checkbox" class="checkbutton_lowercase" id="checkbutton_lowercase">
+                            <span>Include Lowercase Letters</span>
+                        </div>
+                        <div class="checkbutton-numbers">
+                            <input type="checkbox" class="checkbutton_number" id="checkbutton_numbers">
+                            <span>Include Numbers</span>
+                        </div>
+                        <div class="checkbutton-lowercase">
+                            <input type="checkbox" class="checkbutton_symbol" id="checkbutton_symbol">
+                            <span>Include Symbols</span>
+                        </div>
+                    </div>
+                    <div class="settings-strenght">
+                        <div class="strength-span">
+                            <span class="strenght_span">Strength</span>
+                        </div>
+                        <div class="strength-bar">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <div class="settings-generate">
+                        <button class="settings_generate" id="settings_generate">Generate <i class="ri-arrow-right-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
