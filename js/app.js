@@ -11,6 +11,8 @@ const copyKeyboard = document.getElementById("copyKeyboard")
 
 const allBar = document.querySelectorAll(".bar")
 
+const spanStrength = document.getElementById("strenght_span-force")
+
 const bar1 = document.getElementById("bar1")
 const bar2 = document.getElementById("bar2")
 const bar3 = document.getElementById("bar3")
@@ -85,15 +87,18 @@ const rankPassword = (p) => {
     if(p.length <= 6 && !p.includes(containNumbers) && !p.includes(containSymbols)) {
         setBarStyle(bar1, "low")
         barReset([bar2, bar3, bar4])
+        spanStrength.textContent = "LOW"
     }else if(p.length <= 10 && !p.includes(containNumbers) && !p.includes(containSymbols)){
         setBarStyle(bar1, "medium")
         setBarStyle(bar2, "medium")
         barReset([bar3, bar4])
+        spanStrength.textContent = "MEDIUM"
     }else if(p.length >= 14) {
         setBarStyle(bar1, "strong")
         setBarStyle(bar2, "strong")
         setBarStyle(bar3, "strong")
         setBarStyle(bar4, "strong")
+        spanStrength.textContent = "STRONG"
     }
 }
 
