@@ -21,7 +21,7 @@ body {
 
 span {
     color: var(--seconday-color);
-    font-weight: 200;
+    font-weight: 400;
 }
 
 h1 {
@@ -38,11 +38,18 @@ h1 {
     gap: 2rem;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .app-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 400px;
+    width: 450px;
 }
 
 .input-container {
@@ -74,6 +81,74 @@ h1 {
     gap: 1rem;
 }
 
+.settings-length {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.length_span-value {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.settings-slide_range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background-color: #18171F;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Firefox */
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--seconday-color); 
+    cursor: pointer; 
+    border-radius: 50%; 
+    outline: none;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    width: 20px;
+    height: 20px;
+    background: var(--app-bg-color); 
+    cursor: pointer; 
+    border-radius: 50%; 
+    border: 1px solid var(--primary-color);
+}
+
+/* Google chrome */
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 20px; 
+    height: 20px; 
+    background: var(--seconday-color);
+    cursor: pointer; 
+    border-radius: 50%; 
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 20px; 
+    height: 20px; 
+    background: var(--app-bg-color);
+    cursor: pointer; 
+    border-radius: 50%; 
+    border: 1px solid var(--primary-color);
+}
+
+
+
+
+
 .settings-checkbutton {
     display: flex;
     flex-direction: column;
@@ -87,8 +162,81 @@ input[type="checkbox"] {
     height: 20px;
     width: 20px;
     border: 1px solid var(--seconday-color);
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Code Unicode pour une coche, remplacez-le par le symbole de votre choix */
+    font-size: 16px; /* Taille de la police de l'icône */
+    color: #24232b; /* Couleur de l'icône, ajustez-la selon votre design */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
+.checkbox_div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.settings_generate {
+    width: 100%;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: .1s ease;
+}
+
+.settings_generate:hover {
+    background-color: var(--app-bg-color);
+    border: 1px solid var(--primary-color);
+    color: var(--seconday-color);
+}
+
+.settings-strenght {
+    background-color: var(--body-bg-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.strenght_span {
+    color: var(--text-gray-color);
+    font-weight: 500;
+}
+
+.strenght-bar {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.strenght_span-force {
+    color: var(--seconday-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.strenght-bar .bar {
+    border: 1px solid var(--seconday-color);
+    height: 22px;
+    width: 7px;
+}
 
 
