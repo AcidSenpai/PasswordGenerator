@@ -239,4 +239,16 @@ input[type="checkbox"]:checked::before {
     width: 7px;
 }
 
+.bar-low {
+    background-color: rgb(185, 65, 65);
+}
+
+.bar-medium {
+    background-color: rgb(211, 164, 76);
+}
+
+.bar-strong {
+    background-color: var(--primary-color);
+}
+
 
